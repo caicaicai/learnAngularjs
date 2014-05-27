@@ -23,8 +23,20 @@ angular.module('App', [])
             controller: function($scope, $element, $attrs) {
                 $scope.setEdit = function() {
                     console.log('is setting editable!');
-                    $scope.data = 222;
+                    $scope.isEdit = true;
+                    $scope.directiveTempData = angular.copy($scope.data);
                 }
+                $scope.setOK = function() {
+                    $scope.isEdit = false;
+                }
+                $scope.setCancel = function() {
+                    $scope.data = angular.copy($scope.directiveTempData);
+                    $scope.isEdit = false;
+                }
+                $(".directive-data-input").focusout(function(){
+                    $scope.setOK();
+                    $scope.$apply();
+                })
             },
             link: function(s, e, a) {
                 console.log(s.data);
