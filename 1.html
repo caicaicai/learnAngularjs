@@ -29,22 +29,30 @@ app.factory("organize", function(){
 	}
 	return organ;
 
-});
-
-app.config(function(gameProvider){
-	gameProvider.setType("War");
 })
 
 app.service("testService", function(){
 	this.config = '123';
 })
 
+app.config(function(gameProvider){
+	gameProvider.setType("War");
+})
+
 app.controller('AppCtrl', function($scope, game, organize, testService){
 	$scope.title = game.title;
 	$scope.organ = organize.query();
 	$scope.serv  = testService.config;
-	console.log($scope.organ);
+
 })
+</script>
+
+<script>
+var a = '';
+	if (a) {
+		console.log('123');
+	};
+
 </script>
 </body>
 </html>

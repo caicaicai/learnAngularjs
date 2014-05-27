@@ -240,7 +240,4 @@ $(function () {
     /*  angular rendering  */
     angular.element(document).ready(function () { angular.bootstrap(document, [app.name]) });
 
-    
-    console.log(timestamp);
-
 })(angular.module('dashboard', ['dashboard.extra', 'ngRoute', 'ngResource']));
