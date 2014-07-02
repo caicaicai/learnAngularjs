@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="App">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>angularjs</title>
+		<link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="style/core.css">
+		<script src="vendor/jquery.min.js"></script>
+		<script src="vendor/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+	</head>
+	<body ng-controller="ctrl">
+	<div class="container">
+		<div class="row top-row">
+			<div class="col-md-6">
+				<div >
+					<span class="text-primary">原始数据：</span>
+					<input type="text" name="" id="xxoo" ng-model="data">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<span  editable="data"></span>
+			</div>
+		</div>
+	</div>
+	<script src="vendor/angularjs/angular.min.js"></script>
+	<script src="script/script.js"></script>
+	</body>
+</html>

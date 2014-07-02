@@ -1,0 +1,9 @@
+<input  ng-show="isEdit" class="directive-data-input" type="text" ng-model="data">
+<a href="" ng-bind="data" ng-click="setEdit()" ng-hide="isEdit"></a>
+<span ng-show="data!=directiveTempData&&isEdit"><a href="" ng-click="setCancel()" >&nbsp&nbsp取消</a></span>
+<style>
+input:focus{
+background-color: #f66;
+border: 1px solid #444;
+}
+</style>
