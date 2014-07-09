@@ -17,7 +17,7 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="ctrl">
+  <body ng-controller="ctrl as c">
     <div class="top"></div>
     <div class="container-fluid">
       <div ckass="row">
@@ -25,6 +25,7 @@
       <div class="row">
         <div class="col-md-4 text-center">
           {{clientId}}
+          {{c.client}}
         </div>
         <div class="col-md-4 text-center">
           123
